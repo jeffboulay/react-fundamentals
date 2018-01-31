@@ -1,7 +1,7 @@
 import React from 'react';
 
-const HelloWorld = () => (
-    <div>HelloWorld</div>
+const HelloWorld = ({ name }) => (
+    <div>Hello, {name}</div>
 );
 
 export default HelloWorld;
