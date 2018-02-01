@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 import Helloword from './HelloWorld';
+import CoffeeList from './CoffeeList';
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      name:'Jeff'
+      name:'Jeff',
+      list: ['weak coffee', 'super strong coffee']
     }
   }
 
@@ -19,7 +21,8 @@ class App extends Component {
         <form>
           <input type="name" ref='name' onChange={this.update.bind(this)} />
         </form>
-        <Helloword name={this.state.name}></Helloword>
+        <Helloword name={this.state.name} />
+        <CoffeeList list={this.state.list}/>
       </div>
     );
   }
